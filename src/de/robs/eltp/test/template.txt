@@ -1,0 +1,23 @@
+  leading text
+  
+  testDate..........: #{testDate}
+  testNumber........: #{testNumber}
+  testList1.........: #{testList1}
+  testList2.........: #{testList2}
+  testBean..........: id=#{testBean.id}, name=#{testBean.name}
+  
+  formatted date....: #[date:#{testDate},#{dateFormat}]
+  formatted number..: #[number:#{testNumber},#{numberFormat}]
+  
+  include...........: #[include:include1.txt]
+  
+  simple iteration: #[iterate:#{testList1},item,idx,iterate1.txt]
+  
+  nested iteration: #[iterate:#{testList2},item,idx,iterate2a.txt]
+
+  nested iteration in include: #[include:include2.txt]
+
+  var instruction ..: #[var:varName,#{testDate}] --->>> #{varName}
+  utility function..: #{TestUtils:sayHello(testDate)}
+
+  trailing text

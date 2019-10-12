@@ -1,0 +1,2 @@
+
+      iteration block 2b - idx: #{idx}, item: #{item}

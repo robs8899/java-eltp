@@ -1,0 +1,2 @@
+
+    iteration block 2a - idx: #{idx}, item: #[iterate:#{item},item,idx,iterate2b.txt]
