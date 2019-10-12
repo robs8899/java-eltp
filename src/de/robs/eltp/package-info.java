@@ -1,5 +1,5 @@
 /**
  * EL based template processing
- * @author AdmSchoch
+ * @author Robert Schoch
  */
 package de.robs.eltp;

@@ -1,6 +1,5 @@
 /**
  * Resource loading stuff
- * @author AdmSchoch
- *
+ * @author Robert Schoch
  */
 package de.robs.eltp.ld;
