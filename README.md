@@ -8,11 +8,11 @@ Planned to update to EL 3.0, specified in JSR 341 (<https://jcp.org/aboutJava/co
 
 ## How to create a template
 
-### basic syntax
+### Basic syntax
 
 Basic syntax is the EL-Syntax described in the spec. at <https://download.oracle.com/otndocs/jcp/expression_language-2.2-mrel-eval-oth-JSpec/>.
 
-### instructions
+### Instructions
 
 Instructions are additional elements of the template processor, not related to the EL-spec.
 
