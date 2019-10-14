@@ -1,6 +1,5 @@
 package de.robs.eltp.test;
 
-import java.io.IOException;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
 import java.text.DecimalFormatSymbols;
@@ -23,12 +22,6 @@ import de.robs.eltp.ld.ResourceLoader;
 public class RenderingTest {
 
   private RenderingTest() {}
-
-  // convenience method to render a template
-  private static String render(RenderingContext ctx, String templateName) throws IOException {
-    return ctx.getSourceRepository().get(templateName).evaluate(
-        ctx.getElContext(), ctx.getExpressionFactory());
-  }
 
   public static void main(String[] args) {
 
@@ -65,17 +58,17 @@ public class RenderingTest {
       System.out.println("--->> init in " + (t1-t0)/1000 + " micros.");
 
       // --- first rendering ---
-      System.out.println(render(ctx, "template.txt"));
+      System.out.println(ctx.render("template.txt"));
       long t2 = System.nanoTime();
       System.out.println("--->> first rendering in " + (t2-t1)/1000 + " micros.");
 
       // --- second rendering ---
-      System.out.println(render(ctx, "template.txt"));
+      System.out.println(ctx.render("template.txt"));
       long t3 = System.nanoTime();
       System.out.println("--->> second rendering in " + (t3-t2)/1000 + " micros.");
 
       // --- third rendering ---
-      System.out.println(render(ctx, "template.txt"));
+      System.out.println(ctx.render("template.txt"));
       long t4 = System.nanoTime();
       System.out.println("--->> third rendering in " + (t4-t3)/1000 + " micros.");
 

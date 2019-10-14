@@ -1,5 +1,6 @@
 package de.robs.eltp;
 
+import java.io.IOException;
 import java.util.Collection;
 
 import javax.el.ELResolver;
@@ -34,4 +35,16 @@ public class RenderingContext {
     return elContext;
   }
 
+  /**
+   * Convenience method to render a template.
+   * @param templateName - file name of a template
+   * @return the rendered result
+   * @throws IOException
+   */
+  public String render(String templateName) throws IOException {
+    return sourceRepository.get(templateName).evaluate(
+        elContext, expressionFactory);
+  }
+
+  
 }
